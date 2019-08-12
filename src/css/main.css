@@ -1,0 +1,40 @@
+body {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: royalblue;
+  background-color: whitesmoke;
+}
+
+h1 {
+  color: slategray;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1em;
+}
+
+h3 {
+  color: slategray;
+  display: flex;
+  padding-bottom: 2em;
+}
+
+.sticky-header {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+  border-bottom: 1px solid;
+  border-bottom-color: hotpink;
+}
+
+.sticky-header-1 {
+  width: 22rem;
+}
+
+.sticky-header-2 {
+  width: 8rem;
+}
+
+.sticky-header-3 {
+  width: 8rem;
+}
