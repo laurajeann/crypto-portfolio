@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './css/main.css'
 
 class App extends Component {
   state = {
@@ -23,7 +24,20 @@ class App extends Component {
   }
   render() {
     console.log(this.state.cryptos)
-    return null
+    return (
+      <main className="flex flex-column justify-center items-center">
+        <h1>Cryptocurrencies</h1>
+        <h3>View prices and data for the top 100 traded Cryptocurrencies</h3>
+        <div>
+          <div className="sticky-header flex justify-left items-center black">
+            <div className="sticky-header-1"> Cryptocurrencies </div>
+            <div className="sticky-header-2"> Price </div>
+            <div className="sticky-header-3"> Market Cap </div>
+            <div className="sticky-header-4"> 24H Change </div>
+          </div>
+        </div>
+      </main>
+    )
   }
 }
 export default App
