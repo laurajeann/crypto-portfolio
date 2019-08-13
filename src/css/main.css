@@ -24,7 +24,7 @@ h3 {
   top: 0;
   background-color: whitesmoke;
   border-bottom: 1px solid;
-  border-bottom-color: hotpink;
+  border-bottom-color: slategray;
 }
 
 .sticky-header-1 {
@@ -37,4 +37,25 @@ h3 {
 
 .sticky-header-3 {
   width: 8rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.coin-logo {
+  width: 1.3rem;
+}
+
+.coin-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.data-row {
+  transition: background 150ms ease-in-out;
+}
+
+.data-row:hover {
+  background: #fafafa;
 }
