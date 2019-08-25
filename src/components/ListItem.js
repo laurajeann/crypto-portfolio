@@ -8,12 +8,25 @@ function ListItem(props) {
     coinName,
     price,
     marketCap,
-    changePercentage24Hr
+    changePercentage24Hr,
+    showModal,
+    symbol
   } = props
   return (
     <li
       className="flex items-center justify-left mv2 pv3 pointer data-row br2"
       key={id}
+      onClick={() =>
+        showModal({
+          id: id,
+          image: image,
+          coinName: coinName,
+          price: price,
+          marketCap: marketCap,
+          changePercentage24Hr: changePercentage24Hr,
+          symbol: symbol
+        })
+      }
     >
       <div
         style={{
@@ -28,7 +41,7 @@ function ListItem(props) {
           <img alt="coin logo" src={`https://cryptocompare.com${image}`} />
         </div>
       </div>
-      <div className="w5 f3">
+      <div className="w5 f4">
         {coinName
           .split(' ')
           .slice(0, 2)
@@ -42,8 +55,8 @@ function ListItem(props) {
         }}
       >
         {changePercentage24Hr > 0
-          ? `+ ${changePercentage24Hr}`
-          : `- ${changePercentage24Hr.slice(1)}`}
+          ? `+ ${changePercentage24Hr} % `
+          : `- ${changePercentage24Hr.slice(1)} %`}
       </div>
     </li>
   )
