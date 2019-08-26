@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-display {
+  position: relative;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  width: 50%;
+  height: 70%;
+  background: white;
+  color: hotpink;
+  padding: 1rem;
+}
+
+.close-button {
+  position: absolute;
+  text-align: center;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.close-button img {
+  width: 100%;
+  height: auto;
+}
