@@ -12,14 +12,22 @@
 
 .inner-display {
   position: relative;
-  margin: 0;
   display: flex;
-  align-content: center;
-  width: 50%;
-  height: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 80%;
   background: white;
-  color: hotpink;
   padding: 1rem;
+}
+
+.crypto-name {
+  width: 3.5rem;
+}
+
+.coin-image {
+  width: 1.3em;
 }
 
 .close-button {
