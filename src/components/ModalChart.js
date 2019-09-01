@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
-import { AreaChart, Area, XAxis, YAxis, Tooltip, Label } from 'recharts'
+import { LineChart, Line, XAxis, YAxis, Tooltip, Label } from 'recharts'
 
 import '../css/modal.css'
-
+// recharts.org/en-US/api/LineChart - documentation for the chart component
 class ModalChart extends Component {
   render() {
     return (
-      <AreaChart
+      <LineChart
         width={this.props.width}
         height={this.props.height}
         data={this.props.data}
         margin={{ top: 0, right: 0, bottom: 50, left: 25 }}
       >
-        <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#0099ff" />
+        <Line type="monotone" dataKey="price" stroke="#8884d8" fill="#057DCD" />
         <XAxis dataKey="day" interval="preserveEnd">
           <Label value="Days" offset={-10} position="insideBottom" />
         </XAxis>
         <YAxis
+          // callback function to format string displayed on y axis
           tickFormatter={val => '$' + val}
           label={{
             value: 'price',
@@ -26,7 +27,7 @@ class ModalChart extends Component {
           }}
         />
         <Tooltip />
-      </AreaChart>
+      </LineChart>
     )
   }
 }
