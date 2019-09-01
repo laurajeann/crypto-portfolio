@@ -20,14 +20,13 @@
   height: 80%;
   background: white;
   padding: 1rem;
+  color: #ec8946;
+  font-family: Montserrat, sans-serif;
 }
 
-.crypto-name {
-  width: 3.5rem;
-}
-
-.coin-image {
-  width: 1.3em;
+.coin-image img {
+  width: 2.3em;
+  padding-bottom: 2em;
 }
 
 .close-button {

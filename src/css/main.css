@@ -1,7 +1,7 @@
 body {
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: royalblue;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  color: #057dcd;
   background-color: whitesmoke;
 }
 
@@ -15,6 +15,7 @@ h1 {
 h3 {
   color: slategray;
   display: flex;
+  font-family: 'Open Sans', sans-serif;
   padding-bottom: 2em;
 }
 
@@ -23,8 +24,8 @@ h3 {
   position: sticky;
   top: 0;
   background-color: whitesmoke;
-  border-bottom: 1px solid;
-  border-bottom-color: slategray;
+  border-bottom: 1px solid slategray;
+  color: slategray;
 }
 
 .sticky-header-1 {
