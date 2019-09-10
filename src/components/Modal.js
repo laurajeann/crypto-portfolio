@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import debounce from 'lodash.debounce'
 import closeIcon from '../assets/icons/error.svg'
 import ModalChart from './ModalChart'
 
@@ -8,13 +9,35 @@ class Modal extends Component {
   // initialise state
   state = {
     fetching: false,
-    history: []
+    history: [],
+    modalWidth: null
   }
+
+  modalRef = React.createRef()
 
   componentDidMount = () => {
     // after component is rendered, this call is invoked to fetch API data
     // access props to display crypto symbol and last 30 days of data
     this.fetchModalData(this.props.data.symbol, 30)
+    this.setModalWidth()
+
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('resize', this.handleResize)
+  }
+
+  handleResize = () => {
+    debounce(this.setModalWidth, 200)()
+  }
+
+  setModalWidth = () => {
+    this.setState({
+      modalWidth:
+        this.modalRef.current &&
+        this.modalRef.current.getBoundingClientRect().width
+    })
   }
 
   fetchModalData = symbol => {
@@ -45,7 +68,7 @@ class Modal extends Component {
   render() {
     return (
       <div className="modal">
-        <div className="inner-display">
+        <div ref={this.modalRef} className="inner-display">
           <h2 className="modal-coin-name">{this.props.data.coinName}</h2>
           <div className="coin-image flex items-center justify-center pb1">
             <img
@@ -53,13 +76,15 @@ class Modal extends Component {
               src={`https://cryptocompare.com${this.props.data.image}`}
             />
           </div>
+          {this.state.modalWidth && (
+            <ModalChart
+              // The modal chart does not take percentage values so set using window.innerWidth
+              width={this.state.modalWidth * 0.9}
+              height={400}
+              data={this.state.history}
+            />
+          )}
 
-          <ModalChart
-            // The modal chart does not take percentage values so set using window.innerWidth
-            width={window.innerWidth * 0.7}
-            height={400}
-            data={this.state.history}
-          />
           <div onClick={this.props.closeModal} className="close-button">
             <img src={closeIcon} alt="close icon" />
           </div>

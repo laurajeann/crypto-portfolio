@@ -39,12 +39,12 @@ function ListItem(props) {
       >
         {index + 1}
       </div>
-      <div className="w2 flex justify-center items-center mh3">
+      <div className=" main w-2 flex justify-center items-center mh3">
         <div className="coin-logo flex items-center justify-center">
           <img alt="coin logo" src={`https://cryptocompare.com${image}`} />
         </div>
       </div>
-      <div className="w5 f4">
+      <div className=" coin-name w-25">
         {coinName
           // split string into array of words
           .split(' ')
@@ -53,9 +53,10 @@ function ListItem(props) {
           // join words back together as a string with a space between each word
           .join(' ')}
       </div>
-      <div className="w4"> {price}</div>
-      <div className="w4">{marketCap}</div>
+      <div className="price w-25"> {price}</div>
+      <div className=" market-cap w-25">{marketCap}</div>
       <div
+        className="change-24h"
         // ternary operator to display different colour for percentage amount
         style={{
           color: changePercentage24Hr < 0 ? 'red' : 'limegreen'
