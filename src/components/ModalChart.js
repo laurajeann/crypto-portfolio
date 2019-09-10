@@ -10,7 +10,7 @@ class ModalChart extends Component {
         width={this.props.width}
         height={this.props.height}
         data={this.props.data}
-        margin={{ top: 0, right: 0, bottom: 50, left: 25 }}
+        margin={{ top: 0, right: 25, bottom: 50, left: 25 }}
       >
         <Line type="monotone" dataKey="price" stroke="#8884d8" fill="#057DCD" />
         <XAxis dataKey="day" interval="preserveEnd">

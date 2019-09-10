@@ -2,7 +2,7 @@ import React from 'react'
 
 function ListHeader() {
   return (
-    <div className="sticky-header flex justify-center items-center">
+    <div className="sticky-header flex justify-center items-center 50rem">
       <div className="sticky-header-1"> Cryptocurrency </div>
       <div className="sticky-header-2"> Price </div>
       <div className="sticky-header-3"> Market Cap </div>

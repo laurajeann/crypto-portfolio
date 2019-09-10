@@ -29,15 +29,20 @@ h3 {
 }
 
 .sticky-header-1 {
-  width: 22rem;
+  width: 37%;
+  padding-left: 2rem;
 }
 
 .sticky-header-2 {
-  width: 8rem;
+  width: 26%;
 }
 
 .sticky-header-3 {
-  width: 8rem;
+  width: 19%;
+}
+.sticky-header-4 {
+  width: 21%;
+  padding-left: 2rem;
 }
 
 ul {
@@ -59,4 +64,118 @@ ul {
 
 .data-row:hover {
   background: #fafafa;
+}
+
+.spinner {
+  border: 8px solid rgb(240, 239, 239);
+  border-top: 8px solid #ec8946;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  h1 {
+    padding-bottom: 0;
+    margin-top: 2rem;
+  }
+
+  h3 {
+    width: 79%;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .sticky-header-1 {
+    width: 36%;
+    padding-left: 0.5rem;
+  }
+
+  .sticky-header-2 {
+    width: 19%;
+    padding-left: 1rem;
+  }
+
+  .sticky-header-3 {
+    width: 19%;
+    padding-left: 1.5rem;
+  }
+  .sticky-header-4 {
+    width: 21%;
+    padding-left: 1.5rem;
+  }
+
+  .main {
+    margin-right: 0rem;
+    margin-left: 0;
+  }
+  .coin-name {
+    width: 20%;
+    padding-left: 0.5rem;
+  }
+
+  .price {
+    padding-left: 1rem;
+    width: 20%;
+  }
+  .market-cap {
+    padding-left: 2rem;
+    width: 20%;
+  }
+  .change-24h {
+    padding-left: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .content {
+    width: 83%;
+  }
+
+  .sticky-header-1 {
+    width: 37%;
+  }
+
+  .sticky-header-2 {
+    width: 20%;
+  }
+
+  .sticky-header-3 {
+    width: 20%;
+    padding-left: 1rem;
+    text-align: center;
+  }
+  .sticky-header-4 {
+    width: 21%;
+    padding-left: 1.5rem;
+  }
+
+  .main {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+
+  .market-cap {
+    width: 23%;
+  }
 }
