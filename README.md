@@ -1,9 +1,8 @@
 # Coin Party
 
 Provides prices and data for the top 100 traded cryptocurrencies. 
-This project is still a work in progress.Upcoming improvements are: 
+This project is still a work in progress. Upcoming improvements are: 
 
-- Add compatibilty for mobile devices by making design responsive
 - Add feature where user can create a portfolio to track their cryptocurrency holdings
 
 
